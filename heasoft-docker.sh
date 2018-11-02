@@ -16,6 +16,7 @@ echo "using WORKDIR: ${WORKDIR:=$PWD}"
 mkdir -pv $WORKDIR/pfiles
 
 ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+xhost + $ip
 
 docker run \
     -e DISPLAY=$ip:0 \
