@@ -4,7 +4,7 @@
 
 COMMAND=$@
 
-HEASOFT_DOCKER_IMAGE=ichangzhi/astrophys:sl6-heasoft6.24v2
+HEASOFT_DOCKER_IMAGE=ichangzhi/hea:heasoft-6.24
 
 echo "using heasoft in docker images: ${HEASOFT_DOCKER_IMAGE}"
 echo "CALDB: ${CALDB:?please set this variable to your local CALDB}"
