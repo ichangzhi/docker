@@ -1,17 +1,30 @@
-# docker
+# Docker
 <https://hub.docker.com/r/ichangzhi/hea/>
 
-some scripts used for docker images
+First, please install [Docker](https://www.docker.com/products/docker-engine#/download).
 
-## heasoft-docker.sh
+
+# Getting started
+## download the image
+get the heasoft image from DockerHub by doing
 ```bash
 docker pull ichangzhi/hea:heasoft-6.24
 ```
-a script used to work with a heasoft-6.24 container in ichangzhi/hea:heasoft-6.24
+## Check the local images
+```bash
+docker images
+```
+You may get something like this:
+```bash
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ichangzhi/hea       heasoft-6.24        f50fc3ff7773        About an hour ago   4.69GB
+```
 
-For MacOS (Mojave is OK).
+* For MacOS
 
-example:
+To use graphics on OSX, make sure XQuarz is installed. After installing, open XQuartz, and go to XQuartz, Preferences, select the Security tab, and tick the box "Allow connections from network clients". Then exit XQuarz. 
+
+usage:
 ```bash
 export CALDB=/your/local/caldb/path
 ./heasoft-docker.sh fv xxxx.fits
