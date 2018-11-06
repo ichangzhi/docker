@@ -4,29 +4,29 @@
 
 COMMAND=$@
 
-HEASOFT_DOCKER_IMAGE=ichangzhi/astrophys:sl6-heasoft6.24
+HEASOFT_DOCKER_IMAGE=ichangzhi/astrophys:sl6-heasoft6.24v2
 
-echo "using heaosft in docker images: ${HEASOFT_DOCKER_IMAGE}"
+echo "using heasoft in docker images: ${HEASOFT_DOCKER_IMAGE}"
+echo "CALDB: ${CALDB:?please set this variable to your local CALDB}"
 echo "using WORKDIR: ${WORKDIR:=$PWD}"
 #echo "using WORKDIR: ${WORKDIR:=$HOME}"
 
-
+ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+xhost + $ip
 [ -s /tmp/.X11-unix ] || { echo "no /tmp/.X11-unix? no X? not allowed!"; }
 
 mkdir -pv $WORKDIR/pfiles
 
-ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
-xhost + $ip
-
 docker run \
     -e DISPLAY=$ip:0 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $CALDB:/home/soft/caldb \
     -v $WORKDIR:/home/astro \
     --rm -it  --user $(id -u) \
         ${HEASOFT_DOCKER_IMAGE} bash -c "
 
 export HOME=/home/astro
-source /home/soft/heasoft-6.24/init.sh
+source /home/soft/init.sh
 
 cd \$HOME
 
