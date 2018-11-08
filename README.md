@@ -22,8 +22,8 @@ ichangzhi/hea       heasoft-6.24        f50fc3ff7773        About an hour ago   
 
 # for MacOS
 
-To use graphics on OSX, make sure XQuarz is installed. After installing, 
-open XQuartz, and go to XQuartz, Preferences, select the Security tab, 
+To use graphics on OSX, make sure [XQuartz](https://www.xquartz.org/) is installed.
+After installing, open XQuartz, and go to XQuartz, Preferences, select the Security tab, 
 and tick the box "Allow connections from network clients". Then exit XQuarz. 
 
 usage:
