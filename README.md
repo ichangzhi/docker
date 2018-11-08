@@ -6,7 +6,7 @@ First, please install [Docker](https://www.docker.com/products/docker-engine#/do
 
 # getting started
 ## download the image
-get the heasoft image from DockerHub by doing
+get the HEAsoft image from DockerHub by doing
 ```bash
 docker pull ichangzhi/hea:heasoft-6.24
 ```
@@ -20,7 +20,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 ichangzhi/hea       heasoft-6.24        f50fc3ff7773        About an hour ago   4.69GB
 ```
 
-### for MacOS
+# for MacOS
 
 To use graphics on OSX, make sure XQuarz is installed. After installing, 
 open XQuartz, and go to XQuartz, Preferences, select the Security tab, 
@@ -32,6 +32,11 @@ export CALDB=/your/local/caldb/path
 ./heasoft-docker-for-mac.sh fv xxxx.fits
 ```
 
-### for other OS
+# for Linux (not being tested)
+to use graphics, make sure you are in an X11 session
 
-later
+usage:
+```bash
+export CALDB=/your/local/caldb/path
+./heasoft-docker-for-linux.sh fv xxxx.fits
+```
