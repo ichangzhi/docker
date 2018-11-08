@@ -29,7 +29,7 @@ and tick the box "Allow connections from network clients". Then exit XQuarz.
 usage:
 ```bash
 export CALDB=/your/local/caldb/path
-./heasoft-docker.sh fv xxxx.fits
+./heasoft-docker-for-mac.sh fv xxxx.fits
 ```
 
 ### for other OS
