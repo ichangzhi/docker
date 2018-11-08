@@ -6,8 +6,8 @@ COMMAND=$@
 
 HEASOFT_DOCKER_IMAGE=ichangzhi/hea:heasoft-6.24
 
-echo "using heasoft in docker images: ${HEASOFT_DOCKER_IMAGE}"
-echo "CALDB: ${CALDB:?please set this variable to your local CALDB}"
+echo "using HEAsoft in docker images: ${HEASOFT_DOCKER_IMAGE}"
+echo "using CALDB: ${CALDB:?please set this variable to your local CALDB}"
 echo "using WORKDIR: ${WORKDIR:=$PWD}"
 #echo "using WORKDIR: ${WORKDIR:=$HOME}"
 
