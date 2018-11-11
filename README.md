@@ -40,3 +40,5 @@ usage:
 export CALDB=/your/local/caldb/path
 ./heasoft-docker-for-linux.sh fv xxxx.fits
 ```
+# for Unix-like OS (both macOS and Linux)
+later
