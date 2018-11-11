@@ -8,7 +8,7 @@ First, please install [Docker](https://www.docker.com/products/docker-engine#/do
 ## download the image
 get the HEAsoft image from DockerHub by doing
 ```bash
-docker pull ichangzhi/hea:heasoft-6.24
+docker pull ichangzhi/hea:heasoft-6.25
 ```
 ## check the local images
 ```bash
@@ -17,7 +17,7 @@ docker images
 You may get something like this:
 ```bash
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ichangzhi/hea       heasoft-6.24        f50fc3ff7773        About an hour ago   4.69GB
+ichangzhi/hea       heasoft-6.25        84b97e8b3316        About an hour ago   5.11GB
 ```
 
 # for MacOS
