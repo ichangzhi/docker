@@ -8,7 +8,7 @@ First, please install [Docker](https://www.docker.com/products/docker-engine#/do
 ## download the image
 get the HEAsoft image from DockerHub by doing
 ```bash
-docker pull ichangzhi/hea:heasoft-6.25
+docker pull ichangzhi/hea:heasoft-6.26.1
 ```
 ## check the local images
 ```bash
